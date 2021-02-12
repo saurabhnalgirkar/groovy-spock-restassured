@@ -23,7 +23,7 @@ class RestWebServiceTest extends Specification {
     int value1
     @Shared
     int value2
-    
+
     def setupSpec() {
         baseURI = EnvironmentValues.instance.ServiceBaseURI
         basePath = EnvironmentValues.instance.ServiceBasePath
