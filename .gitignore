@@ -9,5 +9,6 @@ ataccama.iml
 /target/maven-status
 /target/surefire-reports
 /target/test-classes
+/target/spock-reports
 /.idea/libraries
 .idea/workspace.xml
