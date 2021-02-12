@@ -31,10 +31,6 @@ Following is a sample maven command to build the entire test suite.
 
 `mvn -Denv="local" -DselectBrowser="safari" clean install` 
 
-If you want to retain history of previous builds for investigation purposes, run the following command.
-
-`mvn -Denv="local" -DselectBrowser="safari" install`
-
 The `-DselectBrowser` takes following arguments assuming the respective web drivers are installed. 
 - "safari"
 - "chrome"
