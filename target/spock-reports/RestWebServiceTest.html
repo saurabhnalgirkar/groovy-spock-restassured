@@ -251,7 +251,7 @@ div.footer {
 </div>
 <div class='summary-report'>
 <h3>Summary:</h3>
-<div class='date-test-ran'>Created on Fri Feb 12 22:17:59 CET 2021 by saurabhnalgirkar</div>
+<div class='date-test-ran'>Created on Fri Feb 12 23:32:10 CET 2021 by saurabhnalgirkar</div>
 <table class='summary-table'>
 <thead>
 <th>Executed features</th>
@@ -263,12 +263,12 @@ div.footer {
 </thead>
 <tbody>
 <tr>
-<td>19</td>
+<td>9</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100.0%</td>
-<td>2.650 seconds</td>
+<td>9</td>
+<td>2</td>
+<td>0.0%</td>
+<td>1.356 seconds</td>
 </tr>
 </tbody>
 </table>
@@ -282,66 +282,42 @@ div.footer {
 <tbody>
 <ul id='toc'>
 <li>
-<a href='#-1624769981' class='feature-toc-pass'>GET Method Test For Value Pair: 50 add 20</a>
+<a href='#-1624769981' class='feature-toc-error'>GET Method Test For Value Pair: 50 add 20</a>
 </li>
 <li>
-<a href='#-1377885143' class='feature-toc-pass'>GET Method Test For Value Pair: 800 subtract 141</a>
+<a href='#-1377885143' class='feature-toc-error'>GET Method Test For Value Pair: 800 subtract 141</a>
 </li>
 <li>
-<a href='#-267678291' class='feature-toc-pass'>GET Method Test For Value Pair: 92 multiply 92</a>
+<a href='#-267678291' class='feature-toc-error'>GET Method Test For Value Pair: 92 multiply 92</a>
 </li>
 <li>
-<a href='#1204886209' class='feature-toc-pass'>GET Method Test For Value Pair: 90 divide 15</a>
+<a href='#1204886209' class='feature-toc-error'>GET Method Test For Value Pair: 90 divide 15</a>
 </li>
 <li>
-<a href='#6529152' class='feature-toc-pass'>GET Method Test For Value Pair: 2147483647 add 2147483647</a>
+<a href='#6529152' class='feature-toc-error'>GET Method Test For Value Pair: 2147483647 add 2147483647</a>
 </li>
 <li>
-<a href='#1177752163' class='feature-toc-pass'>GET Method Test For Value Pair: 2147483647 subtract 2147483647</a>
+<a href='#1177752163' class='feature-toc-error'>GET Method Test For Value Pair: 2147483647 subtract 2147483647</a>
 </li>
 <li>
-<a href='#1588739027' class='feature-toc-pass'>GET Method Test For Value Pair: 2147483647 multiply -2147483648</a>
+<a href='#1588739027' class='feature-toc-error'>GET Method Test For Value Pair: 2147483647 multiply -2147483648</a>
 </li>
 <li>
-<a href='#-1884701026' class='feature-toc-pass'>GET Method Test For Value Pair: 2147483647 divide 2147483647</a>
+<a href='#-1884701026' class='feature-toc-error'>GET Method Test For Value Pair: 2147483647 divide 2147483647</a>
 </li>
 <li>
-<a href='#1450544043' class='feature-toc-pass'>GET Method Test For Value Pair: 5 aaa 4</a>
+<a href='#1450544043' class='feature-toc-error'>GET Method Test For Value Pair: 5 aaa 4</a>
 </li>
 <li>
-<a href='#393025581' class='feature-toc-pass'>POST Method Test For Value Pair: 50 add 20</a>
+<a href='#-1361525190' class='feature-toc-ignored'>POST Method Test For Value Pair: #value1 #operation #value2</a>
 </li>
 <li>
-<a href='#-848680239' class='feature-toc-pass'>POST Method Test For Value Pair: 800 sub 141</a>
-</li>
-<li>
-<a href='#1303283911' class='feature-toc-pass'>POST Method Test For Value Pair: 92 mul 92</a>
-</li>
-<li>
-<a href='#1844183591' class='feature-toc-pass'>POST Method Test For Value Pair: 90 div 15</a>
-</li>
-<li>
-<a href='#1209248362' class='feature-toc-pass'>POST Method Test For Value Pair: 2147483647 add 2147483647</a>
-</li>
-<li>
-<a href='#-251921557' class='feature-toc-pass'>POST Method Test For Value Pair: 2147483647 sub 2147483647</a>
-</li>
-<li>
-<a href='#335725631' class='feature-toc-pass'>POST Method Test For Value Pair: 2147483647 mul -2147483648</a>
-</li>
-<li>
-<a href='#-1509632628' class='feature-toc-pass'>POST Method Test For Value Pair: 2147483647 div -2147483648</a>
-</li>
-<li>
-<a href='#710745109' class='feature-toc-pass'>POST Method Test For Value Pair: 5 aaa 4</a>
-</li>
-<li>
-<a href='#-1721430104' class='feature-toc-pass'>Invalid Method Test</a>
+<a href='#-1721430104' class='feature-toc-ignored'>Invalid Method Test</a>
 </li>
 </ul>
 <tr>
 <td colspan='10'>
-<div class='feature-description' id='-1624769981'>
+<div class='feature-description error' id='-1624769981'>
 <span>GET Method Test For Value Pair: 50 add 20</span>
 <span style='float: right; font-size: 60%;'>
 <a href='#toc'>Return</a>
@@ -360,7 +336,7 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>def request = given()
+<pre class='block-source pre-error'>def request = given()
 .header("Content-Type", "application/json")
 .log().uri().log().method()</pre>
 </td>
@@ -376,8 +352,8 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>def response = request.when()
-.queryParam("val1", value1)
+<pre class='block-source error'>def response = request.when() // line 42</pre>
+<pre class='block-source after-error'>.queryParam("val1", value1)
 .queryParam("val2", value2)
 .get("restWS/$operation")</pre>
 </td>
@@ -393,7 +369,7 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>response.then()
+<pre class='block-source post-error'>response.then()
 .log().body()
 .body(Matchers.notNullValue())
 .statusCode(statusCode)
@@ -423,13 +399,13 @@ div.footer {
 <th class='ex-header'>responseValidation</th>
 </thead>
 <tbody>
-<tr class='ex-pass'>
+<tr class='ex-fail'>
 <td class='ex-value'>add</td>
 <td class='ex-value'>50</td>
 <td class='ex-value'>20</td>
 <td class='ex-value'>200</td>
-<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@7ac5b4c</td>
-<td class='ex-result'>OK</td>
+<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@627ff1b8</td>
+<td class='ex-result'>FAIL</td>
 </tr>
 </tbody>
 </table>
@@ -438,7 +414,21 @@ div.footer {
 </tr>
 <tr>
 <td colspan='10'>
-<div class='feature-description' id='-1377885143'>
+<div class='problem-description'>
+<div class='problem-header'>The following problems occurred:</div>
+<div class='problem-list'>
+<ul>
+<li>
+<pre>java.net.ConnectException: Connection refused (Connection refused)</pre>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description error' id='-1377885143'>
 <span>GET Method Test For Value Pair: 800 subtract 141</span>
 <span style='float: right; font-size: 60%;'>
 <a href='#toc'>Return</a>
@@ -457,7 +447,7 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>def request = given()
+<pre class='block-source pre-error'>def request = given()
 .header("Content-Type", "application/json")
 .log().uri().log().method()</pre>
 </td>
@@ -473,8 +463,8 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>def response = request.when()
-.queryParam("val1", value1)
+<pre class='block-source error'>def response = request.when() // line 42</pre>
+<pre class='block-source after-error'>.queryParam("val1", value1)
 .queryParam("val2", value2)
 .get("restWS/$operation")</pre>
 </td>
@@ -490,7 +480,7 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>response.then()
+<pre class='block-source post-error'>response.then()
 .log().body()
 .body(Matchers.notNullValue())
 .statusCode(statusCode)
@@ -520,13 +510,13 @@ div.footer {
 <th class='ex-header'>responseValidation</th>
 </thead>
 <tbody>
-<tr class='ex-pass'>
+<tr class='ex-fail'>
 <td class='ex-value'>subtract</td>
 <td class='ex-value'>800</td>
 <td class='ex-value'>141</td>
 <td class='ex-value'>200</td>
-<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@77c66a4f</td>
-<td class='ex-result'>OK</td>
+<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@667dcaad</td>
+<td class='ex-result'>FAIL</td>
 </tr>
 </tbody>
 </table>
@@ -535,7 +525,21 @@ div.footer {
 </tr>
 <tr>
 <td colspan='10'>
-<div class='feature-description' id='-267678291'>
+<div class='problem-description'>
+<div class='problem-header'>The following problems occurred:</div>
+<div class='problem-list'>
+<ul>
+<li>
+<pre>java.net.ConnectException: Connection refused (Connection refused)</pre>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description error' id='-267678291'>
 <span>GET Method Test For Value Pair: 92 multiply 92</span>
 <span style='float: right; font-size: 60%;'>
 <a href='#toc'>Return</a>
@@ -554,7 +558,7 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>def request = given()
+<pre class='block-source pre-error'>def request = given()
 .header("Content-Type", "application/json")
 .log().uri().log().method()</pre>
 </td>
@@ -570,8 +574,8 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>def response = request.when()
-.queryParam("val1", value1)
+<pre class='block-source error'>def response = request.when() // line 42</pre>
+<pre class='block-source after-error'>.queryParam("val1", value1)
 .queryParam("val2", value2)
 .get("restWS/$operation")</pre>
 </td>
@@ -587,7 +591,7 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>response.then()
+<pre class='block-source post-error'>response.then()
 .log().body()
 .body(Matchers.notNullValue())
 .statusCode(statusCode)
@@ -617,13 +621,13 @@ div.footer {
 <th class='ex-header'>responseValidation</th>
 </thead>
 <tbody>
-<tr class='ex-pass'>
+<tr class='ex-fail'>
 <td class='ex-value'>multiply</td>
 <td class='ex-value'>92</td>
 <td class='ex-value'>92</td>
 <td class='ex-value'>200</td>
-<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@649b5891</td>
-<td class='ex-result'>OK</td>
+<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@19fd43da</td>
+<td class='ex-result'>FAIL</td>
 </tr>
 </tbody>
 </table>
@@ -632,7 +636,21 @@ div.footer {
 </tr>
 <tr>
 <td colspan='10'>
-<div class='feature-description' id='1204886209'>
+<div class='problem-description'>
+<div class='problem-header'>The following problems occurred:</div>
+<div class='problem-list'>
+<ul>
+<li>
+<pre>java.net.ConnectException: Connection refused (Connection refused)</pre>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description error' id='1204886209'>
 <span>GET Method Test For Value Pair: 90 divide 15</span>
 <span style='float: right; font-size: 60%;'>
 <a href='#toc'>Return</a>
@@ -651,7 +669,7 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>def request = given()
+<pre class='block-source pre-error'>def request = given()
 .header("Content-Type", "application/json")
 .log().uri().log().method()</pre>
 </td>
@@ -667,8 +685,8 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>def response = request.when()
-.queryParam("val1", value1)
+<pre class='block-source error'>def response = request.when() // line 42</pre>
+<pre class='block-source after-error'>.queryParam("val1", value1)
 .queryParam("val2", value2)
 .get("restWS/$operation")</pre>
 </td>
@@ -684,7 +702,7 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>response.then()
+<pre class='block-source post-error'>response.then()
 .log().body()
 .body(Matchers.notNullValue())
 .statusCode(statusCode)
@@ -714,13 +732,13 @@ div.footer {
 <th class='ex-header'>responseValidation</th>
 </thead>
 <tbody>
-<tr class='ex-pass'>
+<tr class='ex-fail'>
 <td class='ex-value'>divide</td>
 <td class='ex-value'>90</td>
 <td class='ex-value'>15</td>
 <td class='ex-value'>200</td>
-<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@47569167</td>
-<td class='ex-result'>OK</td>
+<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@4c302f38</td>
+<td class='ex-result'>FAIL</td>
 </tr>
 </tbody>
 </table>
@@ -729,7 +747,21 @@ div.footer {
 </tr>
 <tr>
 <td colspan='10'>
-<div class='feature-description' id='6529152'>
+<div class='problem-description'>
+<div class='problem-header'>The following problems occurred:</div>
+<div class='problem-list'>
+<ul>
+<li>
+<pre>java.net.ConnectException: Connection refused (Connection refused)</pre>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description error' id='6529152'>
 <span>GET Method Test For Value Pair: 2147483647 add 2147483647</span>
 <span style='float: right; font-size: 60%;'>
 <a href='#toc'>Return</a>
@@ -748,7 +780,7 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>def request = given()
+<pre class='block-source pre-error'>def request = given()
 .header("Content-Type", "application/json")
 .log().uri().log().method()</pre>
 </td>
@@ -764,8 +796,8 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>def response = request.when()
-.queryParam("val1", value1)
+<pre class='block-source error'>def response = request.when() // line 42</pre>
+<pre class='block-source after-error'>.queryParam("val1", value1)
 .queryParam("val2", value2)
 .get("restWS/$operation")</pre>
 </td>
@@ -781,7 +813,7 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>response.then()
+<pre class='block-source post-error'>response.then()
 .log().body()
 .body(Matchers.notNullValue())
 .statusCode(statusCode)
@@ -811,13 +843,13 @@ div.footer {
 <th class='ex-header'>responseValidation</th>
 </thead>
 <tbody>
-<tr class='ex-pass'>
+<tr class='ex-fail'>
 <td class='ex-value'>add</td>
 <td class='ex-value'>2147483647</td>
 <td class='ex-value'>2147483647</td>
 <td class='ex-value'>200</td>
-<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@42d9e8d2</td>
-<td class='ex-result'>OK</td>
+<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@12f279b5</td>
+<td class='ex-result'>FAIL</td>
 </tr>
 </tbody>
 </table>
@@ -826,7 +858,21 @@ div.footer {
 </tr>
 <tr>
 <td colspan='10'>
-<div class='feature-description' id='1177752163'>
+<div class='problem-description'>
+<div class='problem-header'>The following problems occurred:</div>
+<div class='problem-list'>
+<ul>
+<li>
+<pre>java.net.ConnectException: Connection refused (Connection refused)</pre>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description error' id='1177752163'>
 <span>GET Method Test For Value Pair: 2147483647 subtract 2147483647</span>
 <span style='float: right; font-size: 60%;'>
 <a href='#toc'>Return</a>
@@ -845,7 +891,7 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>def request = given()
+<pre class='block-source pre-error'>def request = given()
 .header("Content-Type", "application/json")
 .log().uri().log().method()</pre>
 </td>
@@ -861,8 +907,8 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>def response = request.when()
-.queryParam("val1", value1)
+<pre class='block-source error'>def response = request.when() // line 42</pre>
+<pre class='block-source after-error'>.queryParam("val1", value1)
 .queryParam("val2", value2)
 .get("restWS/$operation")</pre>
 </td>
@@ -878,7 +924,7 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>response.then()
+<pre class='block-source post-error'>response.then()
 .log().body()
 .body(Matchers.notNullValue())
 .statusCode(statusCode)
@@ -908,13 +954,13 @@ div.footer {
 <th class='ex-header'>responseValidation</th>
 </thead>
 <tbody>
-<tr class='ex-pass'>
+<tr class='ex-fail'>
 <td class='ex-value'>subtract</td>
 <td class='ex-value'>2147483647</td>
 <td class='ex-value'>2147483647</td>
 <td class='ex-value'>200</td>
-<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@736b21ee</td>
-<td class='ex-result'>OK</td>
+<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@799f916e</td>
+<td class='ex-result'>FAIL</td>
 </tr>
 </tbody>
 </table>
@@ -923,7 +969,21 @@ div.footer {
 </tr>
 <tr>
 <td colspan='10'>
-<div class='feature-description' id='1588739027'>
+<div class='problem-description'>
+<div class='problem-header'>The following problems occurred:</div>
+<div class='problem-list'>
+<ul>
+<li>
+<pre>java.net.ConnectException: Connection refused (Connection refused)</pre>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description error' id='1588739027'>
 <span>GET Method Test For Value Pair: 2147483647 multiply -2147483648</span>
 <span style='float: right; font-size: 60%;'>
 <a href='#toc'>Return</a>
@@ -942,7 +1002,7 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>def request = given()
+<pre class='block-source pre-error'>def request = given()
 .header("Content-Type", "application/json")
 .log().uri().log().method()</pre>
 </td>
@@ -958,8 +1018,8 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>def response = request.when()
-.queryParam("val1", value1)
+<pre class='block-source error'>def response = request.when() // line 42</pre>
+<pre class='block-source after-error'>.queryParam("val1", value1)
 .queryParam("val2", value2)
 .get("restWS/$operation")</pre>
 </td>
@@ -975,7 +1035,7 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>response.then()
+<pre class='block-source post-error'>response.then()
 .log().body()
 .body(Matchers.notNullValue())
 .statusCode(statusCode)
@@ -1005,13 +1065,13 @@ div.footer {
 <th class='ex-header'>responseValidation</th>
 </thead>
 <tbody>
-<tr class='ex-pass'>
+<tr class='ex-fail'>
 <td class='ex-value'>multiply</td>
 <td class='ex-value'>2147483647</td>
 <td class='ex-value'>-2147483648</td>
 <td class='ex-value'>200</td>
-<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@31881aa2</td>
-<td class='ex-result'>OK</td>
+<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@7a9ceddf</td>
+<td class='ex-result'>FAIL</td>
 </tr>
 </tbody>
 </table>
@@ -1020,7 +1080,21 @@ div.footer {
 </tr>
 <tr>
 <td colspan='10'>
-<div class='feature-description' id='-1884701026'>
+<div class='problem-description'>
+<div class='problem-header'>The following problems occurred:</div>
+<div class='problem-list'>
+<ul>
+<li>
+<pre>java.net.ConnectException: Connection refused (Connection refused)</pre>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description error' id='-1884701026'>
 <span>GET Method Test For Value Pair: 2147483647 divide 2147483647</span>
 <span style='float: right; font-size: 60%;'>
 <a href='#toc'>Return</a>
@@ -1039,7 +1113,7 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>def request = given()
+<pre class='block-source pre-error'>def request = given()
 .header("Content-Type", "application/json")
 .log().uri().log().method()</pre>
 </td>
@@ -1055,8 +1129,8 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>def response = request.when()
-.queryParam("val1", value1)
+<pre class='block-source error'>def response = request.when() // line 42</pre>
+<pre class='block-source after-error'>.queryParam("val1", value1)
 .queryParam("val2", value2)
 .get("restWS/$operation")</pre>
 </td>
@@ -1072,7 +1146,7 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>response.then()
+<pre class='block-source post-error'>response.then()
 .log().body()
 .body(Matchers.notNullValue())
 .statusCode(statusCode)
@@ -1102,13 +1176,13 @@ div.footer {
 <th class='ex-header'>responseValidation</th>
 </thead>
 <tbody>
-<tr class='ex-pass'>
+<tr class='ex-fail'>
 <td class='ex-value'>divide</td>
 <td class='ex-value'>2147483647</td>
 <td class='ex-value'>2147483647</td>
 <td class='ex-value'>200</td>
-<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@1b46392c</td>
-<td class='ex-result'>OK</td>
+<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@3ab35b9c</td>
+<td class='ex-result'>FAIL</td>
 </tr>
 </tbody>
 </table>
@@ -1117,7 +1191,21 @@ div.footer {
 </tr>
 <tr>
 <td colspan='10'>
-<div class='feature-description' id='1450544043'>
+<div class='problem-description'>
+<div class='problem-header'>The following problems occurred:</div>
+<div class='problem-list'>
+<ul>
+<li>
+<pre>java.net.ConnectException: Connection refused (Connection refused)</pre>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description error' id='1450544043'>
 <span>GET Method Test For Value Pair: 5 aaa 4</span>
 <span style='float: right; font-size: 60%;'>
 <a href='#toc'>Return</a>
@@ -1136,7 +1224,7 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>def request = given()
+<pre class='block-source pre-error'>def request = given()
 .header("Content-Type", "application/json")
 .log().uri().log().method()</pre>
 </td>
@@ -1152,8 +1240,8 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>def response = request.when()
-.queryParam("val1", value1)
+<pre class='block-source error'>def response = request.when() // line 42</pre>
+<pre class='block-source after-error'>.queryParam("val1", value1)
 .queryParam("val2", value2)
 .get("restWS/$operation")</pre>
 </td>
@@ -1169,7 +1257,7 @@ div.footer {
 <tr>
 <td></td>
 <td>
-<pre class='block-source'>response.then()
+<pre class='block-source post-error'>response.then()
 .log().body()
 .body(Matchers.notNullValue())
 .statusCode(statusCode)
@@ -1199,13 +1287,13 @@ div.footer {
 <th class='ex-header'>responseValidation</th>
 </thead>
 <tbody>
-<tr class='ex-pass'>
+<tr class='ex-fail'>
 <td class='ex-value'>aaa</td>
 <td class='ex-value'>5</td>
 <td class='ex-value'>4</td>
 <td class='ex-value'>404</td>
-<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@cf01c2e</td>
-<td class='ex-result'>OK</td>
+<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@18dd5ed3</td>
+<td class='ex-result'>FAIL</td>
 </tr>
 </tbody>
 </table>
@@ -1214,15 +1302,29 @@ div.footer {
 </tr>
 <tr>
 <td colspan='10'>
-<div class='feature-description' id='393025581'>
-<span>POST Method Test For Value Pair: 50 add 20</span>
+<div class='problem-description'>
+<div class='problem-header'>The following problems occurred:</div>
+<div class='problem-list'>
+<ul>
+<li>
+<pre>java.net.ConnectException: Connection refused (Connection refused)</pre>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description ignored' id='-1361525190'>
+<span>POST Method Test For Value Pair: #value1 #operation #value2</span>
 <span style='float: right; font-size: 60%;'>
 <a href='#toc'>Return</a>
 </span>
 </div>
 </td>
 </tr>
-<tr>
+<tr class='ignored'>
 <td>
 <div class='block-kind'>Given:</div>
 </td>
@@ -1246,7 +1348,7 @@ def request = given()
 .log().uri().log().method().log().body()</pre>
 </td>
 </tr>
-<tr>
+<tr class='ignored'>
 <td>
 <div class='block-kind'>When:</div>
 </td>
@@ -1260,7 +1362,7 @@ def request = given()
 <pre class='block-source'>def response = request.when().post("restWS/compute")</pre>
 </td>
 </tr>
-<tr>
+<tr class='ignored'>
 <td>
 <div class='block-kind'>Then:</div>
 </td>
@@ -1278,7 +1380,7 @@ def request = given()
 .spec(responseValidation)</pre>
 </td>
 </tr>
-<tr>
+<tr class='ignored'>
 <td>
 <div class='block-kind'>Where:</div>
 </td>
@@ -1287,852 +1389,8 @@ def request = given()
 </td>
 </tr>
 <tr>
-<td>
-<div class='block-kind'>Examples:</div>
-</td>
-<td>
-<div class='spec-examples'>
-<table class='ex-table'>
-<thead>
-<th class='ex-header'>operation</th>
-<th class='ex-header'>value1</th>
-<th class='ex-header'>value2</th>
-<th class='ex-header'>statusCode</th>
-<th class='ex-header'>responseValidation</th>
-</thead>
-<tbody>
-<tr class='ex-pass'>
-<td class='ex-value'>add</td>
-<td class='ex-value'>50</td>
-<td class='ex-value'>20</td>
-<td class='ex-value'>200</td>
-<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@341c6ac2</td>
-<td class='ex-result'>OK</td>
-</tr>
-</tbody>
-</table>
-</div>
-</td>
-</tr>
-<tr>
 <td colspan='10'>
-<div class='feature-description' id='-848680239'>
-<span>POST Method Test For Value Pair: 800 sub 141</span>
-<span style='float: right; font-size: 60%;'>
-<a href='#toc'>Return</a>
-</span>
-</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Given:</div>
-</td>
-<td>
-<div class='block-text'>Setup Request</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>def rawBody = ResourceHelper.loadFileContent("requestBody.json")
-def requestBody = new JSONObject(rawBody)
-.put("val1", value1)
-.put("val2", value2)
-.put("operation", operation)
-.toString()
-def request = given()
-.header("accept", "application/json")
-.header("Content-Type", "application/json")
-.body(requestBody)
-.log().uri().log().method().log().body()</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>When:</div>
-</td>
-<td>
-<div class='block-text'>POST Request</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>def response = request.when().post("restWS/compute")</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Then:</div>
-</td>
-<td>
-<div class='block-text'>Validate Response</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>response.then()
-.log().body()
-.body(Matchers.notNullValue())
-.statusCode(statusCode)
-.spec(responseValidation)</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Where:</div>
-</td>
-<td>
-<div class='block-text'>Test Data Specification</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Examples:</div>
-</td>
-<td>
-<div class='spec-examples'>
-<table class='ex-table'>
-<thead>
-<th class='ex-header'>operation</th>
-<th class='ex-header'>value1</th>
-<th class='ex-header'>value2</th>
-<th class='ex-header'>statusCode</th>
-<th class='ex-header'>responseValidation</th>
-</thead>
-<tbody>
-<tr class='ex-pass'>
-<td class='ex-value'>sub</td>
-<td class='ex-value'>800</td>
-<td class='ex-value'>141</td>
-<td class='ex-value'>200</td>
-<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@38811103</td>
-<td class='ex-result'>OK</td>
-</tr>
-</tbody>
-</table>
-</div>
-</td>
-</tr>
-<tr>
-<td colspan='10'>
-<div class='feature-description' id='1303283911'>
-<span>POST Method Test For Value Pair: 92 mul 92</span>
-<span style='float: right; font-size: 60%;'>
-<a href='#toc'>Return</a>
-</span>
-</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Given:</div>
-</td>
-<td>
-<div class='block-text'>Setup Request</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>def rawBody = ResourceHelper.loadFileContent("requestBody.json")
-def requestBody = new JSONObject(rawBody)
-.put("val1", value1)
-.put("val2", value2)
-.put("operation", operation)
-.toString()
-def request = given()
-.header("accept", "application/json")
-.header("Content-Type", "application/json")
-.body(requestBody)
-.log().uri().log().method().log().body()</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>When:</div>
-</td>
-<td>
-<div class='block-text'>POST Request</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>def response = request.when().post("restWS/compute")</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Then:</div>
-</td>
-<td>
-<div class='block-text'>Validate Response</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>response.then()
-.log().body()
-.body(Matchers.notNullValue())
-.statusCode(statusCode)
-.spec(responseValidation)</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Where:</div>
-</td>
-<td>
-<div class='block-text'>Test Data Specification</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Examples:</div>
-</td>
-<td>
-<div class='spec-examples'>
-<table class='ex-table'>
-<thead>
-<th class='ex-header'>operation</th>
-<th class='ex-header'>value1</th>
-<th class='ex-header'>value2</th>
-<th class='ex-header'>statusCode</th>
-<th class='ex-header'>responseValidation</th>
-</thead>
-<tbody>
-<tr class='ex-pass'>
-<td class='ex-value'>mul</td>
-<td class='ex-value'>92</td>
-<td class='ex-value'>92</td>
-<td class='ex-value'>200</td>
-<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@787d1f9c</td>
-<td class='ex-result'>OK</td>
-</tr>
-</tbody>
-</table>
-</div>
-</td>
-</tr>
-<tr>
-<td colspan='10'>
-<div class='feature-description' id='1844183591'>
-<span>POST Method Test For Value Pair: 90 div 15</span>
-<span style='float: right; font-size: 60%;'>
-<a href='#toc'>Return</a>
-</span>
-</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Given:</div>
-</td>
-<td>
-<div class='block-text'>Setup Request</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>def rawBody = ResourceHelper.loadFileContent("requestBody.json")
-def requestBody = new JSONObject(rawBody)
-.put("val1", value1)
-.put("val2", value2)
-.put("operation", operation)
-.toString()
-def request = given()
-.header("accept", "application/json")
-.header("Content-Type", "application/json")
-.body(requestBody)
-.log().uri().log().method().log().body()</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>When:</div>
-</td>
-<td>
-<div class='block-text'>POST Request</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>def response = request.when().post("restWS/compute")</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Then:</div>
-</td>
-<td>
-<div class='block-text'>Validate Response</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>response.then()
-.log().body()
-.body(Matchers.notNullValue())
-.statusCode(statusCode)
-.spec(responseValidation)</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Where:</div>
-</td>
-<td>
-<div class='block-text'>Test Data Specification</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Examples:</div>
-</td>
-<td>
-<div class='spec-examples'>
-<table class='ex-table'>
-<thead>
-<th class='ex-header'>operation</th>
-<th class='ex-header'>value1</th>
-<th class='ex-header'>value2</th>
-<th class='ex-header'>statusCode</th>
-<th class='ex-header'>responseValidation</th>
-</thead>
-<tbody>
-<tr class='ex-pass'>
-<td class='ex-value'>div</td>
-<td class='ex-value'>90</td>
-<td class='ex-value'>15</td>
-<td class='ex-value'>200</td>
-<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@2becfd4c</td>
-<td class='ex-result'>OK</td>
-</tr>
-</tbody>
-</table>
-</div>
-</td>
-</tr>
-<tr>
-<td colspan='10'>
-<div class='feature-description' id='1209248362'>
-<span>POST Method Test For Value Pair: 2147483647 add 2147483647</span>
-<span style='float: right; font-size: 60%;'>
-<a href='#toc'>Return</a>
-</span>
-</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Given:</div>
-</td>
-<td>
-<div class='block-text'>Setup Request</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>def rawBody = ResourceHelper.loadFileContent("requestBody.json")
-def requestBody = new JSONObject(rawBody)
-.put("val1", value1)
-.put("val2", value2)
-.put("operation", operation)
-.toString()
-def request = given()
-.header("accept", "application/json")
-.header("Content-Type", "application/json")
-.body(requestBody)
-.log().uri().log().method().log().body()</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>When:</div>
-</td>
-<td>
-<div class='block-text'>POST Request</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>def response = request.when().post("restWS/compute")</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Then:</div>
-</td>
-<td>
-<div class='block-text'>Validate Response</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>response.then()
-.log().body()
-.body(Matchers.notNullValue())
-.statusCode(statusCode)
-.spec(responseValidation)</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Where:</div>
-</td>
-<td>
-<div class='block-text'>Test Data Specification</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Examples:</div>
-</td>
-<td>
-<div class='spec-examples'>
-<table class='ex-table'>
-<thead>
-<th class='ex-header'>operation</th>
-<th class='ex-header'>value1</th>
-<th class='ex-header'>value2</th>
-<th class='ex-header'>statusCode</th>
-<th class='ex-header'>responseValidation</th>
-</thead>
-<tbody>
-<tr class='ex-pass'>
-<td class='ex-value'>add</td>
-<td class='ex-value'>2147483647</td>
-<td class='ex-value'>2147483647</td>
-<td class='ex-value'>200</td>
-<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@79e10fb4</td>
-<td class='ex-result'>OK</td>
-</tr>
-</tbody>
-</table>
-</div>
-</td>
-</tr>
-<tr>
-<td colspan='10'>
-<div class='feature-description' id='-251921557'>
-<span>POST Method Test For Value Pair: 2147483647 sub 2147483647</span>
-<span style='float: right; font-size: 60%;'>
-<a href='#toc'>Return</a>
-</span>
-</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Given:</div>
-</td>
-<td>
-<div class='block-text'>Setup Request</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>def rawBody = ResourceHelper.loadFileContent("requestBody.json")
-def requestBody = new JSONObject(rawBody)
-.put("val1", value1)
-.put("val2", value2)
-.put("operation", operation)
-.toString()
-def request = given()
-.header("accept", "application/json")
-.header("Content-Type", "application/json")
-.body(requestBody)
-.log().uri().log().method().log().body()</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>When:</div>
-</td>
-<td>
-<div class='block-text'>POST Request</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>def response = request.when().post("restWS/compute")</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Then:</div>
-</td>
-<td>
-<div class='block-text'>Validate Response</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>response.then()
-.log().body()
-.body(Matchers.notNullValue())
-.statusCode(statusCode)
-.spec(responseValidation)</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Where:</div>
-</td>
-<td>
-<div class='block-text'>Test Data Specification</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Examples:</div>
-</td>
-<td>
-<div class='spec-examples'>
-<table class='ex-table'>
-<thead>
-<th class='ex-header'>operation</th>
-<th class='ex-header'>value1</th>
-<th class='ex-header'>value2</th>
-<th class='ex-header'>statusCode</th>
-<th class='ex-header'>responseValidation</th>
-</thead>
-<tbody>
-<tr class='ex-pass'>
-<td class='ex-value'>sub</td>
-<td class='ex-value'>2147483647</td>
-<td class='ex-value'>2147483647</td>
-<td class='ex-value'>200</td>
-<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@70fede7d</td>
-<td class='ex-result'>OK</td>
-</tr>
-</tbody>
-</table>
-</div>
-</td>
-</tr>
-<tr>
-<td colspan='10'>
-<div class='feature-description' id='335725631'>
-<span>POST Method Test For Value Pair: 2147483647 mul -2147483648</span>
-<span style='float: right; font-size: 60%;'>
-<a href='#toc'>Return</a>
-</span>
-</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Given:</div>
-</td>
-<td>
-<div class='block-text'>Setup Request</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>def rawBody = ResourceHelper.loadFileContent("requestBody.json")
-def requestBody = new JSONObject(rawBody)
-.put("val1", value1)
-.put("val2", value2)
-.put("operation", operation)
-.toString()
-def request = given()
-.header("accept", "application/json")
-.header("Content-Type", "application/json")
-.body(requestBody)
-.log().uri().log().method().log().body()</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>When:</div>
-</td>
-<td>
-<div class='block-text'>POST Request</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>def response = request.when().post("restWS/compute")</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Then:</div>
-</td>
-<td>
-<div class='block-text'>Validate Response</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>response.then()
-.log().body()
-.body(Matchers.notNullValue())
-.statusCode(statusCode)
-.spec(responseValidation)</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Where:</div>
-</td>
-<td>
-<div class='block-text'>Test Data Specification</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Examples:</div>
-</td>
-<td>
-<div class='spec-examples'>
-<table class='ex-table'>
-<thead>
-<th class='ex-header'>operation</th>
-<th class='ex-header'>value1</th>
-<th class='ex-header'>value2</th>
-<th class='ex-header'>statusCode</th>
-<th class='ex-header'>responseValidation</th>
-</thead>
-<tbody>
-<tr class='ex-pass'>
-<td class='ex-value'>mul</td>
-<td class='ex-value'>2147483647</td>
-<td class='ex-value'>-2147483648</td>
-<td class='ex-value'>200</td>
-<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@71789580</td>
-<td class='ex-result'>OK</td>
-</tr>
-</tbody>
-</table>
-</div>
-</td>
-</tr>
-<tr>
-<td colspan='10'>
-<div class='feature-description' id='-1509632628'>
-<span>POST Method Test For Value Pair: 2147483647 div -2147483648</span>
-<span style='float: right; font-size: 60%;'>
-<a href='#toc'>Return</a>
-</span>
-</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Given:</div>
-</td>
-<td>
-<div class='block-text'>Setup Request</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>def rawBody = ResourceHelper.loadFileContent("requestBody.json")
-def requestBody = new JSONObject(rawBody)
-.put("val1", value1)
-.put("val2", value2)
-.put("operation", operation)
-.toString()
-def request = given()
-.header("accept", "application/json")
-.header("Content-Type", "application/json")
-.body(requestBody)
-.log().uri().log().method().log().body()</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>When:</div>
-</td>
-<td>
-<div class='block-text'>POST Request</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>def response = request.when().post("restWS/compute")</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Then:</div>
-</td>
-<td>
-<div class='block-text'>Validate Response</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>response.then()
-.log().body()
-.body(Matchers.notNullValue())
-.statusCode(statusCode)
-.spec(responseValidation)</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Where:</div>
-</td>
-<td>
-<div class='block-text'>Test Data Specification</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Examples:</div>
-</td>
-<td>
-<div class='spec-examples'>
-<table class='ex-table'>
-<thead>
-<th class='ex-header'>operation</th>
-<th class='ex-header'>value1</th>
-<th class='ex-header'>value2</th>
-<th class='ex-header'>statusCode</th>
-<th class='ex-header'>responseValidation</th>
-</thead>
-<tbody>
-<tr class='ex-pass'>
-<td class='ex-value'>div</td>
-<td class='ex-value'>2147483647</td>
-<td class='ex-value'>-2147483648</td>
-<td class='ex-value'>200</td>
-<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@9d3d54e</td>
-<td class='ex-result'>OK</td>
-</tr>
-</tbody>
-</table>
-</div>
-</td>
-</tr>
-<tr>
-<td colspan='10'>
-<div class='feature-description' id='710745109'>
-<span>POST Method Test For Value Pair: 5 aaa 4</span>
-<span style='float: right; font-size: 60%;'>
-<a href='#toc'>Return</a>
-</span>
-</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Given:</div>
-</td>
-<td>
-<div class='block-text'>Setup Request</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>def rawBody = ResourceHelper.loadFileContent("requestBody.json")
-def requestBody = new JSONObject(rawBody)
-.put("val1", value1)
-.put("val2", value2)
-.put("operation", operation)
-.toString()
-def request = given()
-.header("accept", "application/json")
-.header("Content-Type", "application/json")
-.body(requestBody)
-.log().uri().log().method().log().body()</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>When:</div>
-</td>
-<td>
-<div class='block-text'>POST Request</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>def response = request.when().post("restWS/compute")</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Then:</div>
-</td>
-<td>
-<div class='block-text'>Validate Response</div>
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-<pre class='block-source'>response.then()
-.log().body()
-.body(Matchers.notNullValue())
-.statusCode(statusCode)
-.spec(responseValidation)</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Where:</div>
-</td>
-<td>
-<div class='block-text'>Test Data Specification</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Examples:</div>
-</td>
-<td>
-<div class='spec-examples'>
-<table class='ex-table'>
-<thead>
-<th class='ex-header'>operation</th>
-<th class='ex-header'>value1</th>
-<th class='ex-header'>value2</th>
-<th class='ex-header'>statusCode</th>
-<th class='ex-header'>responseValidation</th>
-</thead>
-<tbody>
-<tr class='ex-pass'>
-<td class='ex-value'>aaa</td>
-<td class='ex-value'>5</td>
-<td class='ex-value'>4</td>
-<td class='ex-value'>500</td>
-<td class='ex-value'>io.restassured.internal.ResponseSpecificationImpl@2f04993d</td>
-<td class='ex-result'>OK</td>
-</tr>
-</tbody>
-</table>
-</div>
-</td>
-</tr>
-<tr>
-<td colspan='10'>
-<div class='feature-description' id='-1721430104'>
+<div class='feature-description ignored' id='-1721430104'>
 <span>Invalid Method Test</span>
 <span style='float: right; font-size: 60%;'>
 <a href='#toc'>Return</a>
@@ -2140,7 +1398,7 @@ def request = given()
 </div>
 </td>
 </tr>
-<tr>
+<tr class='ignored'>
 <td>
 <div class='block-kind'>Given:</div>
 </td>
@@ -2173,7 +1431,7 @@ def deleteRequest = given()
 .log().uri().log().method()</pre>
 </td>
 </tr>
-<tr>
+<tr class='ignored'>
 <td>
 <div class='block-kind'>When:</div>
 </td>
@@ -2189,7 +1447,7 @@ def patchResponse = patchRequest.when().patch()
 def deleteResponse = deleteRequest.when().delete()</pre>
 </td>
 </tr>
-<tr>
+<tr class='ignored'>
 <td>
 <div class='block-kind'>Then:</div>
 </td>
