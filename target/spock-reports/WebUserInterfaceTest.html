@@ -1,0 +1,1740 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'></meta>
+<style>body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+h3 {
+  font-weight: 200;
+}
+
+.back-link {
+  font-size: small;
+}
+
+table {
+  margin: 5px;
+}
+
+div.date-test-ran {
+  font-size: small;
+  font-style: italic;
+}
+
+table.features-table {
+  width: 800px;
+}
+
+table.summary-table {
+  width: 800px;
+  text-align: left;
+  font-weight: bold;
+  font-size: small;
+}
+
+table.summary-table th {
+  background: lightblue;
+  padding: 6px;
+}
+
+table.summary-table td {
+  background: #E0E0E0;
+  padding: 6px;
+}
+
+pre.title {
+  font-family: inherit;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1px;
+  color: #333;
+}
+
+pre.narrative {
+  font-family: inherit;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 23px;
+  letter-spacing: -1px;
+  color: #333;
+}
+
+.feature-description {
+  font-size: large;
+  background: lightblue;
+  padding: 12px;
+}
+
+.feature-toc-error {
+  color: #F89A4F;
+}
+
+.feature-toc-failure {
+  color: #FF8080;
+}
+
+.feature-toc-ignored {
+  color: lightgray;
+}
+
+.feature-toc-pass {
+  color: green;
+}
+
+.feature-description.error {
+  background: #F89A4F;
+}
+
+.feature-description.failure {
+  background: #FF8080;
+}
+
+.feature-description.ignored {
+  background: lightgray;
+}
+
+.feature-description.ignored .reason {
+  color: black;
+  font-style: italic;
+  font-size: small;
+}
+
+div.extra-info {
+  font-size: small;
+}
+
+div.spec-headers {
+  margin: 4px;
+  font-style: italic;
+}
+
+div.spec-header {
+}
+
+div.issues {
+  margin-top: 6px;
+  padding: 10px 5px 5px 5px;
+  background-color: lemonchiffon;
+  color: black;
+  font-weight: 500;
+  font-size: small;
+  max-width: 50%;
+}
+
+div.pending-feature {
+  background-color: dodgerblue;
+  color: white;
+  margin-top: 6px;
+  padding: 5px;
+  text-align: center;
+  font-size: small;
+  max-width: 120px;
+}
+
+div.problem-description {
+  padding: 10px;
+  background: pink;
+  border-radius: 10px;
+}
+
+div.problem-header {
+  font-weight: bold;
+  color: red;
+}
+
+div.problem-list {
+
+}
+
+table.ex-table th {
+  background: lightblue;
+  padding: 5px;
+}
+
+table.ex-table td {
+  background: #E0E0E0;
+  padding: 2px 5px 2px 5px;
+}
+
+table td {
+  min-width: 50px;
+}
+
+col.block-kind-col {
+  width: 70px;
+}
+
+span.spec-header {
+  font-weight: bold;
+}
+
+div.spec-text {
+  /*color: green;*/
+}
+
+div.spec-status {
+  font-style: italic;
+}
+
+.ignored {
+  color: gray;
+}
+
+td.ex-result {
+  text-align: center;
+  background: white !important;
+}
+
+.ex-pass {
+  color: darkgreen;
+}
+
+.ex-fail {
+  color: red;
+  font-weight: bold;
+}
+
+div.block-kind {
+  margin: 2px;
+  font-style: italic;
+}
+
+div.block-text {
+
+}
+
+pre.block-source {
+  background-color: whitesmoke;
+  padding: 10px;
+}
+
+pre.block-source.error {
+  background-color: pink;
+  color: red;
+  font-weight: bold;
+}
+
+pre.block-source.pre-error {
+
+}
+
+pre.block-source.before-error {
+  margin-bottom: -14px;
+}
+
+pre.block-source.after-error {
+  color: gray;
+  margin-top: -14px;
+}
+
+pre.block-source.post-error {
+  color: gray;
+}
+
+div.footer {
+  text-align: center;
+  font-size: small;
+}
+</style>
+</head>
+<body>
+<h2>Report for WebUserInterfaceTest</h2>
+<hr></hr>
+<div class='back-link'>
+<a href='index.html'>&lt;&lt; Back</a>
+</div>
+<div class='summary-report'>
+<h3>Summary:</h3>
+<div class='date-test-ran'>Created on Fri Feb 12 22:18:31 CET 2021 by saurabhnalgirkar</div>
+<table class='summary-table'>
+<thead>
+<th>Executed features</th>
+<th>Failures</th>
+<th>Errors</th>
+<th>Skipped</th>
+<th>Success rate</th>
+<th>Time</th>
+</thead>
+<tbody>
+<tr>
+<td>9</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>77.78%</td>
+<td>31.945 seconds</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Features:</h3>
+<table class='features-table'>
+<colgroup>
+<col class='block-kind-col'></col>
+<col class='block-text-col'></col>
+</colgroup>
+<tbody>
+<ul id='toc'>
+<li>
+<a href='#-1301502170' class='feature-toc-pass'>Calculator Web UI Test For Value Pair: 18 and 6</a>
+</li>
+<li>
+<a href='#1963410334' class='feature-toc-pass'>Calculator Web UI Test For Value Pair: 12 and 4</a>
+</li>
+<li>
+<a href='#344717080' class='feature-toc-pass'>Calculator Web UI Test For Value Pair: 52 and 2</a>
+</li>
+<li>
+<a href='#936762672' class='feature-toc-pass'>Calculator Web UI Test For Value Pair: 435 and 5</a>
+</li>
+<li>
+<a href='#-1758195475' class='feature-toc-pass'>Calculator Web UI Test For Value Pair: 534 and 2</a>
+</li>
+<li>
+<a href='#-324807529' class='feature-toc-pass'>Calculator Web UI Test For Value Pair: 2147483647 and 2147483647</a>
+</li>
+<li>
+<a href='#-324807529' class='feature-toc-pass'>Calculator Web UI Test For Value Pair: 2147483647 and 2147483647</a>
+</li>
+<li>
+<a href='#1465666831' class='feature-toc-failure'>Calculator Web UI Test For Value Pair: 2147483647 and -2147483648</a>
+</li>
+<li>
+<a href='#1465666831' class='feature-toc-failure'>Calculator Web UI Test For Value Pair: 2147483647 and -2147483648</a>
+</li>
+</ul>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='-1301502170'>
+<span>Calculator Web UI Test For Value Pair: 18 and 6</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+<div class='extra-info'>
+<ul>
+<li>
+<div>18 plus 6 is: 24</div>
+</li>
+<li>
+<div>18 minus 6 is: 12</div>
+</li>
+<li>
+<div>18 multiplied by 6 is: 108</div>
+</li>
+<li>
+<div>18 divided by 6 is: 3</div>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>Set Browser to Safari</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>Configuration.browser = selectedBrowser
+open(completeURL)</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Addition Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[2].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 plus $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(addResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Subtraction Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[3].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 minus $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(subResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Multiplication Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[4].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 multiplied by $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(mulResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Division Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[5].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 divided by $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(divResult as String))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>Test Data Specification</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<th class='ex-header'>value1</th>
+<th class='ex-header'>value2</th>
+<th class='ex-header'>addResult</th>
+<th class='ex-header'>subResult</th>
+<th class='ex-header'>mulResult</th>
+<th class='ex-header'>divResult</th>
+</thead>
+<tbody>
+<tr class='ex-pass'>
+<td class='ex-value'>18</td>
+<td class='ex-value'>6</td>
+<td class='ex-value'>24</td>
+<td class='ex-value'>12</td>
+<td class='ex-value'>108</td>
+<td class='ex-value'>3</td>
+<td class='ex-result'>OK</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='1963410334'>
+<span>Calculator Web UI Test For Value Pair: 12 and 4</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+<div class='extra-info'>
+<ul>
+<li>
+<div>12 plus 4 is: 16</div>
+</li>
+<li>
+<div>12 minus 4 is: 8</div>
+</li>
+<li>
+<div>12 multiplied by 4 is: 48</div>
+</li>
+<li>
+<div>12 divided by 4 is: 3</div>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>Set Browser to Safari</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>Configuration.browser = selectedBrowser
+open(completeURL)</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Addition Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[2].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 plus $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(addResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Subtraction Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[3].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 minus $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(subResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Multiplication Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[4].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 multiplied by $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(mulResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Division Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[5].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 divided by $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(divResult as String))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>Test Data Specification</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<th class='ex-header'>value1</th>
+<th class='ex-header'>value2</th>
+<th class='ex-header'>addResult</th>
+<th class='ex-header'>subResult</th>
+<th class='ex-header'>mulResult</th>
+<th class='ex-header'>divResult</th>
+</thead>
+<tbody>
+<tr class='ex-pass'>
+<td class='ex-value'>12</td>
+<td class='ex-value'>4</td>
+<td class='ex-value'>16</td>
+<td class='ex-value'>8</td>
+<td class='ex-value'>48</td>
+<td class='ex-value'>3</td>
+<td class='ex-result'>OK</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='344717080'>
+<span>Calculator Web UI Test For Value Pair: 52 and 2</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+<div class='extra-info'>
+<ul>
+<li>
+<div>52 plus 2 is: 54</div>
+</li>
+<li>
+<div>52 minus 2 is: 50</div>
+</li>
+<li>
+<div>52 multiplied by 2 is: 104</div>
+</li>
+<li>
+<div>52 divided by 2 is: 26</div>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>Set Browser to Safari</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>Configuration.browser = selectedBrowser
+open(completeURL)</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Addition Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[2].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 plus $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(addResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Subtraction Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[3].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 minus $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(subResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Multiplication Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[4].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 multiplied by $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(mulResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Division Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[5].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 divided by $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(divResult as String))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>Test Data Specification</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<th class='ex-header'>value1</th>
+<th class='ex-header'>value2</th>
+<th class='ex-header'>addResult</th>
+<th class='ex-header'>subResult</th>
+<th class='ex-header'>mulResult</th>
+<th class='ex-header'>divResult</th>
+</thead>
+<tbody>
+<tr class='ex-pass'>
+<td class='ex-value'>52</td>
+<td class='ex-value'>2</td>
+<td class='ex-value'>54</td>
+<td class='ex-value'>50</td>
+<td class='ex-value'>104</td>
+<td class='ex-value'>26</td>
+<td class='ex-result'>OK</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='936762672'>
+<span>Calculator Web UI Test For Value Pair: 435 and 5</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+<div class='extra-info'>
+<ul>
+<li>
+<div>435 plus 5 is: 440</div>
+</li>
+<li>
+<div>435 minus 5 is: 430</div>
+</li>
+<li>
+<div>435 multiplied by 5 is: 2175</div>
+</li>
+<li>
+<div>435 divided by 5 is: 87</div>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>Set Browser to Safari</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>Configuration.browser = selectedBrowser
+open(completeURL)</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Addition Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[2].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 plus $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(addResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Subtraction Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[3].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 minus $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(subResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Multiplication Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[4].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 multiplied by $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(mulResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Division Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[5].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 divided by $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(divResult as String))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>Test Data Specification</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<th class='ex-header'>value1</th>
+<th class='ex-header'>value2</th>
+<th class='ex-header'>addResult</th>
+<th class='ex-header'>subResult</th>
+<th class='ex-header'>mulResult</th>
+<th class='ex-header'>divResult</th>
+</thead>
+<tbody>
+<tr class='ex-pass'>
+<td class='ex-value'>435</td>
+<td class='ex-value'>5</td>
+<td class='ex-value'>440</td>
+<td class='ex-value'>430</td>
+<td class='ex-value'>2175</td>
+<td class='ex-value'>87</td>
+<td class='ex-result'>OK</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='-1758195475'>
+<span>Calculator Web UI Test For Value Pair: 534 and 2</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+<div class='extra-info'>
+<ul>
+<li>
+<div>534 plus 2 is: 536</div>
+</li>
+<li>
+<div>534 minus 2 is: 532</div>
+</li>
+<li>
+<div>534 multiplied by 2 is: 1068</div>
+</li>
+<li>
+<div>534 divided by 2 is: 267</div>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>Set Browser to Safari</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>Configuration.browser = selectedBrowser
+open(completeURL)</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Addition Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[2].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 plus $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(addResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Subtraction Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[3].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 minus $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(subResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Multiplication Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[4].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 multiplied by $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(mulResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Division Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[5].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 divided by $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(divResult as String))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>Test Data Specification</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<th class='ex-header'>value1</th>
+<th class='ex-header'>value2</th>
+<th class='ex-header'>addResult</th>
+<th class='ex-header'>subResult</th>
+<th class='ex-header'>mulResult</th>
+<th class='ex-header'>divResult</th>
+</thead>
+<tbody>
+<tr class='ex-pass'>
+<td class='ex-value'>534</td>
+<td class='ex-value'>2</td>
+<td class='ex-value'>536</td>
+<td class='ex-value'>532</td>
+<td class='ex-value'>1068</td>
+<td class='ex-value'>267</td>
+<td class='ex-result'>OK</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='-324807529'>
+<span>Calculator Web UI Test For Value Pair: 2147483647 and 2147483647</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+<div class='extra-info'>
+<ul>
+<li>
+<div>2147483647 plus 2147483647 is: -2</div>
+</li>
+<li>
+<div>2147483647 minus 2147483647 is: 0</div>
+</li>
+<li>
+<div>2147483647 multiplied by 2147483647 is: 1</div>
+</li>
+<li>
+<div>2147483647 divided by 2147483647 is: 1</div>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>Set Browser to Safari</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>Configuration.browser = selectedBrowser
+open(completeURL)</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Addition Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[2].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 plus $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(addResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Subtraction Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[3].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 minus $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(subResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Multiplication Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[4].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 multiplied by $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(mulResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Division Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[5].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 divided by $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(divResult as String))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>Test Data Specification</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<th class='ex-header'>value1</th>
+<th class='ex-header'>value2</th>
+<th class='ex-header'>addResult</th>
+<th class='ex-header'>subResult</th>
+<th class='ex-header'>mulResult</th>
+<th class='ex-header'>divResult</th>
+</thead>
+<tbody>
+<tr class='ex-pass'>
+<td class='ex-value'>2147483647</td>
+<td class='ex-value'>2147483647</td>
+<td class='ex-value'>-2</td>
+<td class='ex-value'>0</td>
+<td class='ex-value'>1</td>
+<td class='ex-value'>1</td>
+<td class='ex-result'>OK</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='-324807529'>
+<span>Calculator Web UI Test For Value Pair: 2147483647 and 2147483647</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+<div class='extra-info'>
+<ul>
+<li>
+<div>2147483647 plus 2147483647 is: -2</div>
+</li>
+<li>
+<div>2147483647 minus 2147483647 is: 0</div>
+</li>
+<li>
+<div>2147483647 multiplied by 2147483647 is: 1</div>
+</li>
+<li>
+<div>2147483647 divided by 2147483647 is: 1</div>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>Set Browser to Safari</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>Configuration.browser = selectedBrowser
+open(completeURL)</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Addition Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[2].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 plus $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(addResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Subtraction Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[3].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 minus $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(subResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Multiplication Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[4].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 multiplied by $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(mulResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Division Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[5].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 divided by $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(divResult as String))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>Test Data Specification</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<th class='ex-header'>value1</th>
+<th class='ex-header'>value2</th>
+<th class='ex-header'>addResult</th>
+<th class='ex-header'>subResult</th>
+<th class='ex-header'>mulResult</th>
+<th class='ex-header'>divResult</th>
+</thead>
+<tbody>
+<tr class='ex-pass'>
+<td class='ex-value'>2147483647</td>
+<td class='ex-value'>2147483647</td>
+<td class='ex-value'>-2</td>
+<td class='ex-value'>0</td>
+<td class='ex-value'>1</td>
+<td class='ex-value'>1</td>
+<td class='ex-result'>OK</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description failure' id='1465666831'>
+<span>Calculator Web UI Test For Value Pair: 2147483647 and -2147483648</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+<div class='extra-info'>
+<ul>
+<li>
+<div>2147483647 plus -2147483648 is: -1</div>
+</li>
+<li>
+<div>2147483647 minus -2147483648 is: -1</div>
+</li>
+<li>
+<div>2147483647 multiplied by -2147483648 is: -2147483648</div>
+</li>
+<li>
+<div>2147483647 divided by -2147483648 is: 0</div>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>Set Browser to Safari</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source pre-error'>Configuration.browser = selectedBrowser
+open(completeURL)</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Addition Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source pre-error'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[2].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 plus $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(addResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Subtraction Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source pre-error'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[3].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 minus $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(subResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Multiplication Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source pre-error'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[4].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 multiplied by $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(mulResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Division Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source before-error'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[5].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 divided by $value2 is: " + $(By.name("result")).getValue())</pre>
+<pre class='block-source error'>$(By.name("result")).shouldHave(value(divResult as String)) // line 67</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>Test Data Specification</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<th class='ex-header'>value1</th>
+<th class='ex-header'>value2</th>
+<th class='ex-header'>addResult</th>
+<th class='ex-header'>subResult</th>
+<th class='ex-header'>mulResult</th>
+<th class='ex-header'>divResult</th>
+</thead>
+<tbody>
+<tr class='ex-fail'>
+<td class='ex-value'>2147483647</td>
+<td class='ex-value'>-2147483648</td>
+<td class='ex-value'>-1</td>
+<td class='ex-value'>-1</td>
+<td class='ex-value'>-2147483648</td>
+<td class='ex-value'>-0.9999999995343387126922607421875</td>
+<td class='ex-result'>FAIL</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='problem-description'>
+<div class='problem-header'>The following problems occurred:</div>
+<div class='problem-list'>
+<ul>
+<li>
+<pre>Element should have value &apos;-0.9999999995343387126922607421875&apos; {By.name: result}<br/>Element: &apos;&lt;INPUT name=&quot;result&quot; readonly=&quot;readonly&quot; size=&quot;20&quot; type=&quot;text&quot; value=&quot;0&quot;&gt;&lt;/INPUT&gt;&apos;<br/>Screenshot: file:/Users/saurabhnalgirkar/GitHubProjects/task/build/reports/tests/1613164705060.0.png<br/>Page source: file:/Users/saurabhnalgirkar/GitHubProjects/task/build/reports/tests/1613164705060.0.html<br/>Timeout: 4 s.</pre>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description failure' id='1465666831'>
+<span>Calculator Web UI Test For Value Pair: 2147483647 and -2147483648</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+<div class='extra-info'>
+<ul>
+<li>
+<div>2147483647 plus -2147483648 is: -1</div>
+</li>
+<li>
+<div>2147483647 minus -2147483648 is: -1</div>
+</li>
+<li>
+<div>2147483647 multiplied by -2147483648 is: -2147483648</div>
+</li>
+<li>
+<div>2147483647 divided by -2147483648 is: 0</div>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<div class='block-text'>Set Browser to Safari</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source pre-error'>Configuration.browser = selectedBrowser
+open(completeURL)</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Addition Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source pre-error'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[2].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 plus $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(addResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Subtraction Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source pre-error'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[3].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 minus $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(subResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Multiplication Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source pre-error'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[4].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 multiplied by $value2 is: " + $(By.name("result")).getValue())
+$(By.name("result")).shouldHave(value(mulResult))</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>And:</div>
+</td>
+<td>
+<div class='block-text'>Division Test</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<pre class='block-source before-error'>$(By.name("val1")).setValue(value1)
+$(By.name("val2")).setValue(value2)
+$$(By.tagName("input"))[5].click()
+$$(By.tagName("input"))[6].click()
+reportInfo("$value1 divided by $value2 is: " + $(By.name("result")).getValue())</pre>
+<pre class='block-source error'>$(By.name("result")).shouldHave(value(divResult as String)) // line 67</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Where:</div>
+</td>
+<td>
+<div class='block-text'>Test Data Specification</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<th class='ex-header'>value1</th>
+<th class='ex-header'>value2</th>
+<th class='ex-header'>addResult</th>
+<th class='ex-header'>subResult</th>
+<th class='ex-header'>mulResult</th>
+<th class='ex-header'>divResult</th>
+</thead>
+<tbody>
+<tr class='ex-fail'>
+<td class='ex-value'>2147483647</td>
+<td class='ex-value'>-2147483648</td>
+<td class='ex-value'>-1</td>
+<td class='ex-value'>-1</td>
+<td class='ex-value'>-2147483648</td>
+<td class='ex-value'>-0.9999999995343387126922607421875</td>
+<td class='ex-result'>FAIL</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='problem-description'>
+<div class='problem-header'>The following problems occurred:</div>
+<div class='problem-list'>
+<ul>
+<li>
+<pre>Element should have value &apos;-0.9999999995343387126922607421875&apos; {By.name: result}<br/>Element: &apos;&lt;INPUT name=&quot;result&quot; readonly=&quot;readonly&quot; size=&quot;20&quot; type=&quot;text&quot; value=&quot;0&quot;&gt;&lt;/INPUT&gt;&apos;<br/>Screenshot: file:/Users/saurabhnalgirkar/GitHubProjects/task/build/reports/tests/1613164711358.1.png<br/>Page source: file:/Users/saurabhnalgirkar/GitHubProjects/task/build/reports/tests/1613164711358.1.html<br/>Timeout: 4 s.</pre>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<hr></hr>
+<div class='footer'>Generated by <a href='https://github.com/renatoathaydes/spock-reports'>Athaydes Spock Reports</a></div>
+</body>
+</html>
