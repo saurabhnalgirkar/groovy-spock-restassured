@@ -44,7 +44,7 @@ The `-DselectBrowser` takes following arguments assuming the respective web driv
 The `-Denv` argument only takes "local" for now.
 
 # Reports
-Reports are generated in `/target/spock-reports` folder after each build.
+Reports are generated in `target/spock-reports` folder after each build.
 
 Sample Report :
 <html>
