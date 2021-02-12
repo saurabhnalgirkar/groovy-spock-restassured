@@ -24,7 +24,7 @@ All other dependencies are bundled in `pom.xml`
 
 # Instructions
 The source `src/test/groovy` consists of two scripts with multiple Spock features. 
-Each Spock feature consists of sub-features which are equivalent of one test run.
+Each Spock feature consists of sub-features which are equivalent of one test.
 - REST Web Service : `RestWebServiceTest.groovy`
 - Web UI : `WebUserInterfaceTest.groovy` 
 
