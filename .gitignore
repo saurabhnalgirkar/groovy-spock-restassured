@@ -11,12 +11,3 @@ ataccama.iml
 /target/test-classes
 /.idea/libraries
 .idea/workspace.xml
-task.calc.automated.tests.iml
-.idea/vcs.xml
-.idea/modules.xml
-.idea/misc.xml
-.idea/dictionaries
-.idea/compiler.xml
-.idea/codeStyles
-.idea/.name
-.idea/$CACHE_FILE$
