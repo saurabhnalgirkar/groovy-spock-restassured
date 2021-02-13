@@ -2,15 +2,18 @@ package TestingUtils
 
 class ResourceHelper {
 
-    static String loadFileContent(String path) {
-        byte[] bytes
-        try {
-            bytes = ((InputStream)Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream(path))).readAllBytes()
-        } catch (NullPointerException | IOException ignored) {
-            bytes = null
-        }
+    public static String fileContent = ""
 
-        return new String(bytes)
+    static String loadResourceContent(String path) {
+        def file = new File(path)
+
+        try {
+             fileContent = file.text
+        } catch (NullPointerException | IOException ignored) {
+             fileContent = null
+        }
+        return fileContent
     }
+
 
 }

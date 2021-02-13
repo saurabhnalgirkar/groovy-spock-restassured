@@ -67,7 +67,7 @@ class RestWebServiceTest extends Specification {
     @Unroll
     def 'POST Method Test For Value Pair: #value1 #operation #value2'() {
         given: 'Setup Request'
-        def rawBody = ResourceHelper.loadFileContent("requestBody.json")
+        def rawBody = ResourceHelper.loadResourceContent("src/test/resources/requestBody.json")
 
         def requestBody = new JSONObject(rawBody)
                 .put("val1", value1)
@@ -107,7 +107,7 @@ class RestWebServiceTest extends Specification {
 
     def 'Invalid Method Test'() {
         given: 'Setup Request'
-        def rawBody = ResourceHelper.loadFileContent("requestBody.json")
+        def rawBody = ResourceHelper.loadResourceContent("src/test/resources/requestBody.json")
         def requestBody = new JSONObject(rawBody)
                 .put("val1", 42)
                 .put("val2", 6)
