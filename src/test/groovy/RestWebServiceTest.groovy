@@ -20,9 +20,13 @@ class RestWebServiceTest extends Specification {
     @Shared
     String operation
     @Shared
-    int value1
+    long value1
     @Shared
-    int value2
+    long value2
+    @Shared
+    long moreThanIntMax = (Integer.MAX_VALUE as long) + 4
+    @Shared
+    long lessThanIntMin = (Integer.MIN_VALUE as long) - 4
 
     def setupSpec() {
         baseURI = EnvironmentValues.instance.ServiceBaseURI
@@ -42,6 +46,18 @@ class RestWebServiceTest extends Specification {
                 .queryParam("val2", value2)
                 .get("restWS/$operation")
 
+        if (statusCode == 200) {
+            def result = response.then().extract().path("result") as long
+            reportInfo("$value1 $operation $value2 = " + result)
+            println("$value1 $operation $value2 = " + result)
+
+            // This check will be necessary once the "results" start handling overflow and underflow.
+            // Currently this condition is never met
+            if (result > Integer.MAX_VALUE || result < Integer.MIN_VALUE) {
+                throw new Exception("The number ${result} is beyond Java integer limit")
+            }
+        }
+
         then: 'Validate Response'
         response.then()
                 .log().body()
@@ -50,17 +66,18 @@ class RestWebServiceTest extends Specification {
                 .spec(responseValidation)
 
         where: 'Test Data Specification'
-        operation   | value1            | value2            | statusCode | responseValidation
-        "add"       | 50                | 20                | 200        | expect().body("result", Matchers.equalTo(value1 + value2))
-        "subtract"  | 800               | 141               | 200        | expect().body("result", Matchers.equalTo(value1 - value2))
-        "multiply"  | 92                | 92                | 200        | expect().body("result", Matchers.equalTo(value1 * value2))
-        "divide"    | 90                | 15                | 200        | expect().body("result", Matchers.equalTo(value1.intdiv(value2)))
+        operation   | value1                                    | value2                                  | statusCode | responseValidation
+        "add"       | ResourceHelper.getRandomNumber(-100, 100) | ResourceHelper.getRandomNumber(-10, 50) | 200        | expect().body("result", Matchers.equalTo(Math.addExact(value1,value2)))
+        "subtract"  | ResourceHelper.getRandomNumber(-100, 100) | ResourceHelper.getRandomNumber(-10, 50) | 200        | expect().body("result", Matchers.equalTo(Math.subtractExact(value1,value2)))
+        "multiply"  | ResourceHelper.getRandomNumber(-100, 100) | ResourceHelper.getRandomNumber(-10, 50) | 200        | expect().body("result", Matchers.equalTo(Math.multiplyExact(value1,value2)))
+        "divide"    | ResourceHelper.getRandomNumber(-100, 100) | ResourceHelper.getRandomNumber(10, 30)  | 200        | expect().body("result", Matchers.equalTo(value1.intdiv(value2)))
 
-        "add"       | Integer.MAX_VALUE | Integer.MAX_VALUE | 200        | expect().body("result", Matchers.equalTo(value1 + value2))
-        "subtract"  | Integer.MAX_VALUE | Integer.MAX_VALUE | 200        | expect().body("result", Matchers.equalTo(value1 - value2))
-        "multiply"  | Integer.MAX_VALUE | Integer.MIN_VALUE | 200        | expect().body("result", Matchers.equalTo(value1 * value2))
-        "divide"    | Integer.MAX_VALUE | Integer.MAX_VALUE | 200        | expect().body("result", Matchers.equalTo(value1.intdiv(value2)))
-        "aaa"       | 5                 | 4                 | 404        | expect().body(Matchers.notNullValue())
+        // Edge Cases
+        "add"       | moreThanIntMax                            | ResourceHelper.getRandomNumber(-10, 30) | 404        | expect().body(Matchers.notNullValue())
+        "add"       | ResourceHelper.getRandomNumber(-10, 30)   | lessThanIntMin                          | 404        | expect().body(Matchers.notNullValue())
+        "divide"    | ResourceHelper.getRandomNumber(-10, 30)   | 0                                       | 500        | expect().body(Matchers.notNullValue())
+//        "add"       | Integer.MAX_VALUE as long                 | 4                                       | 400        | expect().body(Matchers.notNullValue())
+//        "subtract"  | Integer.MIN_VALUE as long                 | 4                                       | 400        | expect().body(Matchers.notNullValue())
 
     }
 
@@ -84,6 +101,18 @@ class RestWebServiceTest extends Specification {
         when: 'POST Request'
         def response = request.when().post("restWS/compute")
 
+        if (statusCode == 200) {
+            def result = response.then().extract().path("result") as long
+            reportInfo("$value1 $operation $value2 = " + result)
+            println("$value1 $operation $value2 = " + result)
+
+            // This check will be necessary once the "results" start handling overflow and underflow.
+            // Currently this condition is never met
+            if (result > Integer.MAX_VALUE || result < Integer.MIN_VALUE) {
+                throw new Exception("The number ${result} is beyond Java integer limit")
+            }
+        }
+
         then: 'Validate Response'
         response.then()
                 .log().body()
@@ -92,22 +121,24 @@ class RestWebServiceTest extends Specification {
                 .spec(responseValidation)
 
         where: 'Test Data Specification'
-        operation   | value1            | value2            | statusCode | responseValidation
-        "add"       | 50                | 20                | 200        | expect().body("result", Matchers.equalTo(value1 + value2))
-        "sub"       | 800               | 141               | 200        | expect().body("result", Matchers.equalTo(value1 - value2))
-        "mul"       | 92                | 92                | 200        | expect().body("result", Matchers.equalTo(value1 * value2))
-        "div"       | 90                | 15                | 200        | expect().body("result", Matchers.equalTo(value1.intdiv(value2)))
+        operation | value1                                    | value2                                  | statusCode | responseValidation
+        "add"     | ResourceHelper.getRandomNumber(-100, 100) | ResourceHelper.getRandomNumber(-10, 50) | 200        | expect().body("result", Matchers.equalTo(Math.addExact(value1,value2)))
+        "sub"     | ResourceHelper.getRandomNumber(-100, 100) | ResourceHelper.getRandomNumber(-10, 50) | 200        | expect().body("result", Matchers.equalTo(Math.subtractExact(value1,value2)))
+        "mul"     | ResourceHelper.getRandomNumber(-100, 100) | ResourceHelper.getRandomNumber(-10, 50) | 200        | expect().body("result", Matchers.equalTo(Math.multiplyExact(value1,value2)))
+        "div"     | ResourceHelper.getRandomNumber(-100, 100) | ResourceHelper.getRandomNumber(10, 30)  | 200        | expect().body("result", Matchers.equalTo(value1.intdiv(value2)))
 
-        "add"       | Integer.MAX_VALUE | Integer.MAX_VALUE | 200        | expect().body("result", Matchers.equalTo(value1 + value2))
-        "sub"       | Integer.MAX_VALUE | Integer.MAX_VALUE | 200        | expect().body("result", Matchers.equalTo(value1 - value2))
-        "mul"       | Integer.MAX_VALUE | Integer.MIN_VALUE | 200        | expect().body("result", Matchers.equalTo(value1 * value2))
-        "div"       | Integer.MAX_VALUE | Integer.MIN_VALUE | 200        | expect().body("result", Matchers.equalTo(value1.intdiv(value2)))
-        "aaa"       | 5                 | 4                 | 500        | expect().body(Matchers.notNullValue())
+        // Edge Cases
+        "add"       | moreThanIntMax                            | ResourceHelper.getRandomNumber(-10, 30) | 400        | expect().body(Matchers.containsString("Numeric value ($value1) out of range of int"))
+        "add"       | ResourceHelper.getRandomNumber(-10, 30)   | lessThanIntMin                          | 400        | expect().body(Matchers.containsString("Numeric value ($value2) out of range of int"))
+        "div"       | ResourceHelper.getRandomNumber(-10, 30)   | 0                                       | 500        | expect().body(Matchers.notNullValue())
+//        "add"       | Integer.MAX_VALUE as long                 | 4                                       | 400        | expect().body(Matchers.notNullValue())
+//        "sub"       | Integer.MIN_VALUE as long                 | 4                                       | 400        | expect().body(Matchers.notNullValue())
     }
 
     def 'Invalid Method Test'() {
         given: 'Setup Request'
         def rawBody = ResourceHelper.loadResourceContent("src/test/resources/requestBody.json")
+
         def requestBody = new JSONObject(rawBody)
                 .put("val1", 42)
                 .put("val2", 6)

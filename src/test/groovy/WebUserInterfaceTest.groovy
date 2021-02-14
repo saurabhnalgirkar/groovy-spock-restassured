@@ -3,11 +3,13 @@ import com.codeborne.selenide.Configuration
 import org.openqa.selenium.By
 import spock.lang.Shared
 import spock.lang.Specification
+import spock.lang.Stepwise
 import spock.lang.Unroll
 
-import static com.codeborne.selenide.Condition.value
+import static com.codeborne.selenide.Condition.*
 import static com.codeborne.selenide.Selenide.*
 
+@Stepwise
 class WebUserInterfaceTest extends Specification {
 
     @Shared
@@ -67,17 +69,45 @@ class WebUserInterfaceTest extends Specification {
         $(By.name("result")).shouldHave(value(divResult as String))
 
         where: 'Test Data Specification'
-        value1            | value2            | addResult       | subResult       | mulResult                   | divResult
-        18                | 6                 | value1 + value2 | value1 - value2 | value1 * (value2 as Number) | value1 / value2
-        12                | 4                 | value1 + value2 | value1 - value2 | value1 * (value2 as Number) | value1 / value2
-        52                | 2                 | value1 + value2 | value1 - value2 | value1 * (value2 as Number) | value1 / value2
-        435               | 5                 | value1 + value2 | value1 - value2 | value1 * (value2 as Number) | value1 / value2
-        534               | 2                 | value1 + value2 | value1 - value2 | value1 * (value2 as Number) | value1 / value2
+        value1 | value2 | addResult       | subResult       | mulResult                   | divResult
+        18     | 6      | value1 + value2 | value1 - value2 | value1 * (value2 as Number) | value1 / value2
+        12     | -4     | value1 + value2 | value1 - value2 | value1 * (value2 as Number) | value1 / value2
+        -52    | -2     | value1 + value2 | value1 - value2 | value1 * (value2 as Number) | value1 / value2
+        0      | 10     | value1 + value2 | value1 - value2 | value1 * (value2 as Number) | value1 / value2
+        4      | 7      | value1 + value2 | value1 - value2 | value1 * (value2 as Number) | 0
 
-        Integer.MAX_VALUE | Integer.MAX_VALUE | value1 + value2 | value1 - value2 | value1 * (value2 as Number) | value1 / value2
-        Integer.MAX_VALUE | Integer.MAX_VALUE | value1 + value2 | value1 - value2 | value1 * (value2 as Number) | value1 / value2
-        Integer.MAX_VALUE | Integer.MIN_VALUE | value1 + value2 | value1 - value2 | value1 * (value2 as Number) | value1 / value2
-        Integer.MAX_VALUE | Integer.MIN_VALUE | value1 + value2 | value1 - value2 | value1 * (value2 as Number) | value1 / value2
+    }
+
+    def 'Negative Test: Invalid Input Value Fields' () {
+        given: 'Set Browser to Safari'
+
+        Configuration.browser = selectedBrowser
+        open(completeURL)
+
+        $(By.name("val1")).setValue(value1)
+        $(By.name("val2")).setValue(value2)
+        $$(By.tagName("input"))[2].click()
+        $$(By.tagName("input"))[6].click()
+        $$(By.tagName("title"))[0].shouldHave(text("HTTP Status 500 – Internal Server Error"))
+
+        where: 'Test Data Specification'
+        value1 | value2
+        "aa"   | 6
+        6      | "aa"
+
+    }
+
+    def 'Negative Test: Divide By 0 Test' () {
+        given: 'Set Browser to Safari'
+
+        Configuration.browser = selectedBrowser
+        open(completeURL)
+
+        $(By.name("val1")).setValue("3")
+        $(By.name("val2")).setValue("0")
+        $$(By.tagName("input"))[5].click()
+        $$(By.tagName("input"))[6].click()
+        $$(By.tagName("title"))[0].shouldHave(exactText("HTTP Status 500 – Internal Server Error"))
 
     }
 

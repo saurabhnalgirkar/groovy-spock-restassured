@@ -7,9 +7,12 @@ class EnvironmentValues {
     public String ServiceBasePath
     public String SelectBrowser
     public String Browser
-    private static EnvironmentValues TheInstance
 
-    static EnvironmentValues getInstance() {
+    private EnvironmentValues() {}
+
+    public static EnvironmentValues getInstance() {
+
+        EnvironmentValues TheInstance
 
         if (TheInstance == null ) {
             TheInstance = new EnvironmentValues(

@@ -15,5 +15,9 @@ class ResourceHelper {
         return fileContent
     }
 
+    static int getRandomNumber(int minAcceptedValue, int maxAcceptedValue) {
+        def randomValue = (Math.random() * (maxAcceptedValue - minAcceptedValue + 1) + minAcceptedValue) as Integer
+        return randomValue
+    }
 
 }
