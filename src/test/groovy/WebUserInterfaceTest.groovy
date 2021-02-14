@@ -88,7 +88,7 @@ class WebUserInterfaceTest extends Specification {
         $(By.name("val2")).setValue(value2)
         $$(By.tagName("input"))[2].click()
         $$(By.tagName("input"))[6].click()
-        $$(By.tagName("title"))[0].shouldHave(text("HTTP Status 500 – Internal Server Error"))
+        $$(By.tagName("title"))[0].shouldHave(exactText("HTTP Status 500 – Internal Server Error"))
 
         where: 'Test Data Specification'
         value1 | value2
