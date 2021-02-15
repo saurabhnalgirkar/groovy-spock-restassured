@@ -88,6 +88,7 @@ class WebUserInterfaceTest extends Specification {
         $(By.name("val2")).setValue(value2)
         $$(By.tagName("input"))[2].click()
         $$(By.tagName("input"))[6].click()
+        sleep(100)
         $$(By.tagName("title"))[0].shouldHave(exactText("HTTP Status 500 – Internal Server Error"))
 
         where: 'Test Data Specification'
@@ -107,6 +108,37 @@ class WebUserInterfaceTest extends Specification {
         $(By.name("val2")).setValue("0")
         $$(By.tagName("input"))[5].click()
         $$(By.tagName("input"))[6].click()
+        sleep(100)
+        $$(By.tagName("title"))[0].shouldHave(exactText("HTTP Status 500 – Internal Server Error"))
+
+    }
+
+    def 'Negative Test: Input Value1 more than Int Max' () {
+        given: 'Set Browser to Safari'
+
+        Configuration.browser = selectedBrowser
+        open(completeURL)
+
+        $(By.name("val1")).setValue("2147483652")
+        $(By.name("val2")).setValue("1")
+        $$(By.tagName("input"))[2].click()
+        $$(By.tagName("input"))[6].click()
+        sleep(100)
+        $$(By.tagName("title"))[0].shouldHave(exactText("HTTP Status 500 – Internal Server Error"))
+
+    }
+
+    def 'Negative Test: Input Value2 more than Int Max' () {
+        given: 'Set Browser to Safari'
+
+        Configuration.browser = selectedBrowser
+        open(completeURL)
+
+        $(By.name("val1")).setValue("1")
+        $(By.name("val2")).setValue("2147483652")
+        $$(By.tagName("input"))[2].click()
+        $$(By.tagName("input"))[6].click()
+        sleep(100)
         $$(By.tagName("title"))[0].shouldHave(exactText("HTTP Status 500 – Internal Server Error"))
 
     }
