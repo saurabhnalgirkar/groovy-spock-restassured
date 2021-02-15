@@ -22,19 +22,18 @@ This project assumes following pre-requisites are installed.
 All other dependencies are bundled in `pom.xml`
 
 # Instructions
-The source `src/test/groovy` consists of two scripts with multiple Spock features. 
+The source `src/test/groovy` consists of three scripts with multiple Spock features.
 Each Spock feature consists of sub-features which are equivalent of one test.
 - REST Web Service : `RestWebServiceTest.groovy`
-- Web UI : `WebUserInterfaceTest.groovy` 
+- SOAP Web Service: `SoapWebServiceTest.groovy`
+- Web UI : `WebUserInterfaceTest.groovy`
 
 Following is a sample maven command to build the entire test suite.
 
-`mvn -Denv="local" -DselectBrowser="safari" clean install` 
+`mvn -Denv="local" -DselectBrowser="safari" clean install`
 
-The `-DselectBrowser` takes following arguments assuming the respective web drivers are installed. 
+The `-DselectBrowser` takes following arguments assuming the respective web driver is installed.
 - "safari"
-- "chrome"
-- "firefox"
 
 The `-Denv` argument only takes "local" for now.
 
@@ -51,11 +50,11 @@ Sample Report :
 <hr></hr>
 <div class='project-header'>
 <span class='project-name'>Project: Ataccama Calc Task | </span>
-<span class='project-version'>Version: 2021-02-14-23-28-00</span>
+<span class='project-version'>Version: 2021-02-15-16-24-44</span>
 </div>
 <div class='summary-report'>
 <h3>Specifications summary:</h3>
-<div class='date-test-ran'>Created on Sun Feb 14 23:28:26 CET 2021 by saurabhnalgirkar</div>
+<div class='date-test-ran'>Created on Mon Feb 15 16:25:13 CET 2021 by saurabhnalgirkar</div>
 <table class='summary-table'>
 <thead>
 <th>Total</th>
@@ -74,7 +73,7 @@ Sample Report :
 <td>0</td>
 <td>0</td>
 <td>100.0%</td>
-<td>24.734 seconds</td>
+<td>27.341 seconds</td>
 </tr>
 </tbody>
 </table>
@@ -100,18 +99,18 @@ Sample Report :
 <td>0</td>
 <td>0</td>
 <td>100.0%</td>
-<td>2.777 seconds</td>
+<td>3.255 seconds</td>
 </tr>
-<tr class='ignored'>
+<tr>
 <td>
 <a href='SoapWebServiceTest.html'>SoapWebServiceTest</a>
 </td>
-<td>1</td>
+<td>2</td>
 <td>0</td>
 <td>0</td>
-<td>1</td>
+<td>0</td>
 <td>100.0%</td>
-<td>0.009 seconds</td>
+<td>2.318 seconds</td>
 </tr>
 <tr>
 <td>
@@ -122,7 +121,7 @@ Sample Report :
 <td>0</td>
 <td>0</td>
 <td>100.0%</td>
-<td>21.948 seconds</td>
+<td>21.768 seconds</td>
 </tr>
 </tbody>
 </table>
