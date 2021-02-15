@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.testcalc.qa.ataccama.com/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <soap:subtract>
+            <val1>90</val1>
+            <val2>10</val2>
+        </soap:subtract>
+    </soapenv:Body>
+</soapenv:Envelope>

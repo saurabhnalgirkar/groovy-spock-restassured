@@ -1,60 +1,105 @@
 import TestingUtils.EnvironmentValues
 import TestingUtils.ResourceHelper
-import io.restassured.specification.ResponseSpecification
+import io.restassured.path.xml.XmlPath
 import org.hamcrest.Matchers
-import org.json.JSONObject
-import spock.lang.Ignore
 import spock.lang.Shared
 import spock.lang.Specification
+import spock.lang.Stepwise
 import spock.lang.Unroll
+
 import static io.restassured.RestAssured.*
 
-@Ignore
+@Stepwise
 class SoapWebServiceTest extends Specification {
 
     @Shared
     int statusCode
     @Shared
-    ResponseSpecification responseValidation
+    String requestBodyPath
     @Shared
-    String operation
-    @Shared
-    int value1
-    @Shared
-    int value2
+    String result
 
     def setupSpec() {
-        baseURI = "http://soap.testcalc.qa.ataccama.com/"
-        basePath = "TestCalcSoapImplementationService"
+        baseURI = EnvironmentValues.instance.ServiceBaseURI
+        basePath = EnvironmentValues.instance.ServiceBasePath
     }
 
-    @Unroll
-    def 'GET Method Test for #operation'() {
+    def 'Validate WSDL Specification'() {
         given: 'Setup Request'
+
         def request = given()
-                .header("Content-Type", "application/json")
+                .header("Content-Type", "text/xml")
                 .log().uri()
                 .log().method()
 
         when: 'GET Request'
         def response = request.when()
-                .get()
+                .get("/soapWS?wsdl")
+
+        def expectedWsdl = ResourceHelper.loadResourceContent("src/test/resources/sampleWsdl.xml")
+        response.asString() == expectedWsdl
 
         then: 'Validate Response'
         response.then()
                 .log().body()
                 .body(Matchers.notNullValue())
                 .statusCode(200)
-//                .spec(responseValidation)
+    }
 
-//        where: 'Test Data Specification'
-//        operation  | value1 | value2 | statusCode | responseValidation
-//        "add"      | 50     | 20     | 200        | expect().body("result", Matchers.equalTo(value1 + value2))
-//        "subtract" | 800    | 141    | 200        | expect().body("result", Matchers.equalTo(value1 - value2))
-//        "multiply" | 92     | 92     | 200        | expect().body("result", Matchers.equalTo(value1 * value2))
-//        "divide"   | 90     | 15     | 200        | expect().body("result", Matchers.equalTo(value1.intdiv(value2)))
+    @Unroll
+    def 'SoapWS Test for #requestBodyPath'() {
+        given: 'Setup Request'
+        def rawBody = ResourceHelper.loadResourceContent(requestBodyPath)
+
+        def request = given()
+                .header("Content-Type", "text/xml")
+                .body(rawBody)
+                .log().uri()
+                .log().method()
+
+        when: 'POST Request'
+        def response = request.when()
+                .post("/soapWS")
+
+        XmlPath xmlPath = new XmlPath(response.asString())
+
+        switch (requestBodyPath) {
+            case "src/test/resources/addSoapRequest.xml":
+                result = xmlPath.getString("addResponse")
+                assert result == "10"
+                break
+            case "src/test/resources/subSoapRequest.xml":
+                result = xmlPath.getString("subtractResponse")
+                assert result == "80"
+                break
+            case "src/test/resources/mulSoapRequest.xml":
+                result = xmlPath.getString("multiplyResponse")
+                assert result == "100"
+                break
+            case "src/test/resources/divSoapRequest.xml":
+                result = xmlPath.getString("divideResponse")
+                assert result == "5"
+                break
+            case "src/test/resources/invalidSoapRequest.xml":
+                result = xmlPath.getString("Fault")
+                assert result == "S:Server/ by zero"
+                break
+        }
+
+        then: 'Validate Response'
+        response.then()
+                .log().body()
+                .body(Matchers.notNullValue())
+                .statusCode(statusCode)
+
+        where:
+        requestBodyPath                             | statusCode
+        "src/test/resources/addSoapRequest.xml"     | 200
+        "src/test/resources/subSoapRequest.xml"     | 200
+        "src/test/resources/mulSoapRequest.xml"     | 200
+        "src/test/resources/divSoapRequest.xml"     | 200
+        "src/test/resources/invalidSoapRequest.xml" | 500
+
     }
 
 }
-
-
