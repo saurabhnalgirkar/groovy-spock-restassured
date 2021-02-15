@@ -34,6 +34,8 @@ Following is a sample maven command to build the entire test suite.
 
 The `-DselectBrowser` takes following arguments assuming the respective web driver is installed.
 - "safari"
+- "chrome"
+- "firefox"
 
 The `-Denv` argument only takes "local" for now.
 
