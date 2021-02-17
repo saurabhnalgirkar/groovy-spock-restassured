@@ -32,10 +32,8 @@ Following is a sample maven command to build the entire test suite.
 
 `mvn -Denv="local" -DselectBrowser="safari" clean install`
 
-The `-DselectBrowser` takes following arguments assuming the respective web driver is installed.
+The `-DselectBrowser` takes the following argument assuming the respective web driver is installed.
 - "safari"
-- "chrome"
-- "firefox"
 
 The `-Denv` argument only takes "local" for now.
 
