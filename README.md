@@ -14,7 +14,7 @@ Spock : http://spockframework.org/spock/docs/1.1-rc-1/all_in_one.html
 REST-Assured : https://github.com/rest-assured/rest-assured/wiki/Usage
 
 # Pre-requisites
-This project assumes following pre-requisites are installed.
+This project assumes following pre-requisites are installed and the application is running locally.
 - Java
 - Maven
 - Apache Tomcat
