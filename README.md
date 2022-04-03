@@ -1,6 +1,6 @@
 # Task
 
-API and UI Automated Validation for `Ataccama TestCalc!` using Groovy, Spock and REST-Assured.
+API and UI Automated Validation for a calculator API using Groovy, Spock and REST-Assured.
 
 `Ataccama TestCalc!` is an application allowing user to perform 
 arithmetical operations on two arguments in the enormous range of Java int. 
