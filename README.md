@@ -2,8 +2,7 @@
 
 API and UI Automated Validation for a calculator API using Groovy, Spock and REST-Assured.
 
-`Ataccama TestCalc!` is an application allowing user to perform 
-arithmetical operations on two arguments in the enormous range of Java int. 
+The is an application that allows user to perform arithmetical operations on two arguments in the enormous range of Java int. 
 No need to use human brain again!
 
 # Documentation
