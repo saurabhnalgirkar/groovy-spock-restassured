@@ -1,4 +1,4 @@
-# Task
+# Introduction
 
 API and UI Automated Validation for a calculator (API & UI) using Groovy, Spock and REST-Assured.
 
