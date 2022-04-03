@@ -1,6 +1,6 @@
 # Task
 
-API and UI Automated Validation for a calculator API using Groovy, Spock and REST-Assured.
+API and UI Automated Validation for a calculator (API & UI) using Groovy, Spock and REST-Assured.
 
 The is an application that allows user to perform arithmetical operations on two arguments in the enormous range of Java int. 
 No need to use human brain again!
@@ -48,7 +48,7 @@ Sample Report :
 <h2>Specification run results</h2>
 <hr></hr>
 <div class='project-header'>
-<span class='project-name'>Project: Ataccama Calc Task | </span>
+<span class='project-name'>Project: Calculator | </span>
 <span class='project-version'>Version: 2021-02-15-16-24-44</span>
 </div>
 <div class='summary-report'>
