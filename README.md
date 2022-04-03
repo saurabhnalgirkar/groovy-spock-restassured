@@ -1,6 +1,6 @@
 # Introduction
 
-API and UI Automated Validation for a calculator (API & UI) using Groovy, Spock and REST-Assured.
+API and UI validation for a calculator (API & UI) using Groovy, Spock and REST-Assured.
 
 The is an application that allows user to perform arithmetical operations on two arguments in the enormous range of Java int. 
 No need to use human brain again!
